@@ -14,7 +14,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 import withSectionWrapper from "hocs/withSectionWrapper"
+import withFullScreenWrapper from "hocs/withFullScreenWrapper"
 import { Map as ImmutableMap } from "immutable"
 import {
   DEFAULT_IFRAME_FEATURE_POLICY,
@@ -92,4 +94,4 @@ function getNonEmptyString(
   return value == null || value === "" ? undefined : value
 }
 
-export default withSectionWrapper(IFrame)
+export default withSectionWrapper(withFullScreenWrapper(IFrame))

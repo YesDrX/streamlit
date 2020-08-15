@@ -15,6 +15,7 @@
  * limitations under the License.
  */
 
+import withFullScreenWrapper from "hocs/withFullScreenWrapper"
 import { StreamlitMarkdown } from "components/shared/StreamlitMarkdown"
 import React, { ReactNode } from "react"
 import { Map as ImmutableMap } from "immutable"
@@ -44,4 +45,4 @@ class Markdown extends React.PureComponent<Props> {
   }
 }
 
-export default Markdown
+export default withFullScreenWrapper(Markdown)
